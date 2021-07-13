@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lecture_11/data/routes.dart';
+import 'package:flutter_lecture_11/ui/customer_page/customer_page.dart';
 import 'package:flutter_lecture_11/ui/main_page.dart';
+import 'package:flutter_lecture_11/ui/merchant_page/merchant_page.dart';
 import 'package:flutter_lecture_11/ui/register_page/register_customer_page.dart';
 import 'package:flutter_lecture_11/ui/register_page/register_merchant_page.dart';
 
@@ -61,15 +63,15 @@ class _MainRegisterPageState extends State<MainRegisterPage> {
                     onPressed: () async {
                       if (globalKey.currentState.validate()) {
                         globalKey.currentState.save();
-                        AppRoute.appRoute.pushFunction(MainPage());
+                        // AppRoute.appRoute.pushFunction(MainPage());
                         // AppRoute.appRoute.pushNameFunction('customer');
 
-                        // Navigator.of(context)
-                        //     .push(MaterialPageRoute(builder: (context) {
-                        //   return (UserType.Customer == userType)
-                        //       ? CustomerPage()
-                        //       : MerchantPage();
-                        // }));
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (context) {
+                          return (UserType.Customer == userType)
+                              ? CustomerPage()
+                              : MerchantPage();
+                        }));
 
                         //Navigator.of(context).pushNamed('customer');
                       }
