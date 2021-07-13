@@ -17,7 +17,7 @@ class CustomerPage extends StatelessWidget {
               Text(CustomerData.customerData.customer.password),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pop();
+                    Navigator.of(context).pop('Done In Customer');
                   },
                   child: Text(('Sign Out')))
             ],
