@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lecture_11/data/customer_data.dart';
+import 'package:flutter_lecture_11/data/sharedpreferences_data.dart';
 import 'package:flutter_lecture_11/ui/register_page/custom_text_form_field_widget.dart';
 import 'package:string_validator/string_validator.dart';
 
@@ -18,7 +19,7 @@ class RegisterCustomerPage extends StatelessWidget {
               return null;
             },
             onSaved: (String value) {
-              CustomerData.customerData.customer.email = value;
+            SPData.spData.setUserName(value);
             },
           ),
           SizedBox(
@@ -33,7 +34,7 @@ class RegisterCustomerPage extends StatelessWidget {
               return null;
             },
             onSaved: (String value) {
-              CustomerData.customerData.customer.password = value;
+              SPData.spData.setPassword(value);
             },
           ),
         ],

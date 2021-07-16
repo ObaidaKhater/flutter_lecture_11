@@ -65,7 +65,6 @@ class _MainRegisterPageState extends State<MainRegisterPage> {
                         globalKey.currentState.save();
                         // AppRoute.appRoute.pushFunction(MainPage());
                         // AppRoute.appRoute.pushNameFunction('customer');
-
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (context) {
                           return (UserType.Customer == userType)
